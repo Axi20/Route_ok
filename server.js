@@ -1,11 +1,15 @@
 const express = require('express');
 const app = express();
+const connectToDatabase = require('./utils/db');
 
 
 //middlewares
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
+
+//Adatbázis kezelése
+connectToDatabase();
 
 //route-ok
 app.use('/',require('./routes/mainRoute'));

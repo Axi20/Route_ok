@@ -1,6 +1,6 @@
 const getRequest = (req, res) => {
     const adatok = {
-        "nev": 'Jane Doe'
+        nev: 'Jane Doe'
     };
 
     res.render('megjelenit', {adatok});
